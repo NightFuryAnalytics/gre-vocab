@@ -15,6 +15,8 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 - Switch between **Sections** and a flat **Word list** for quicker review.
 - Search across sections, including supported word forms from the source PDF.
 - **✓ Mark as read** on each detail card. Tap again to mark it unread. Read words also show a checkmark in lists and search results.
+- **Random word test** gives you one word at a time. Tap the card to reveal the meaning, then mark it **Correct** or **Needs review**.
+- **Needs review** words are saved in a local review bucket and are prioritized the next time you use Random word test.
 - Next/Previous navigation stays within your active category, level, and reading-progress filters.
 
 ## Use the app
@@ -24,7 +26,9 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 3. Review the card and mark it as read when ready.
 4. Continue with **Next word**, or return to the word list.
 
-Filters and read checkmarks are saved in your browser’s local storage. They do not sync between devices or browsers. Clearing site data removes them. The downloaded file and the hosted website have separate storage.
+For a quick quiz, tap **Random word test**, think of the meaning, tap the card to reveal the answer, then mark **Correct** or **Needs review**. The test respects active filters where possible, and words in the Needs review bucket are shown first.
+
+Filters, read checkmarks, and Needs review words are saved in your browser’s local storage. They do not sync between devices or browsers. Clearing site data removes them. The downloaded file and the hosted website have separate storage.
 
 ## Run locally
 
@@ -66,7 +70,7 @@ The **160+** tag reflects the PDF’s hard-section lists, not an independently v
 
 Definitions cover selected study senses rather than every dictionary sense. Synonyms and antonyms depend on context; contextual contrasts are labeled. Mnemonics and word breakdowns are memory associations, not etymological claims. Roman Urdu spelling may vary.
 
-**Review status:** study material is a draft for user review. Marking a word as read records that you reviewed it; it does not certify mastery.
+**Review status:** study material is a draft for user review. Marking a word as read records that you reviewed it; marking it Correct in the random test records your self-check for the review bucket only. Neither action certifies mastery.
 
 ## Repository files
 
