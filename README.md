@@ -7,7 +7,7 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 ## What’s included
 
 - **878 words and phrases**, grouped into eight sections of 100 and a final section of 78.
-- Word cards include meaning, word breakdown cue, example sentence, English and Roman Urdu mnemonics, synonyms, and antonyms.
+- Word cards include meaning, two memory cues, example sentence, English and Roman Urdu mnemonics, synonyms, and antonyms.
 - Source tags: **160+**, **High frequency**, **Confusing words**, and **New words 2023**. Detail cards include the original set numbers where applicable.
 - Category filter chips: select one or more categories, or choose **All words** to reset.
 - Within **160+**, choose **Basic (150)** or **Advanced (179)**. These are suggested study levels, not classifications from the PDF.
@@ -15,6 +15,7 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 - Switch between **Sections** and a flat **Word list** for quicker review.
 - Search across sections, including supported word forms from the source PDF.
 - **✓ Mark as read** on each detail card. Read words also show a checkmark in lists and search results.
+- Bookmark a list row to save a resume point for the active category or level.
 - **Random word test** gives you one word at a time with **Correct** and **Needs review** actions.
 - **Needs review** words are saved in a local review bucket and are prioritized the next time you use Random word test.
 - Next/Previous navigation stays within your active category, level, and reading-progress filters.
@@ -59,7 +60,7 @@ The vocabulary was adapted from the supplied **GRE-341-LIST-NEW.pdf**. Repeated 
 
 The **160+** tag reflects the PDF’s hard-section lists, not an independently verified difficulty rating or a score guarantee. The separately headed **New Words 2023** list has its own tag. Words can belong to more than one source list.
 
-Definitions cover selected study senses rather than every dictionary sense. Synonyms and antonyms depend on context; contextual contrasts are labeled. Mnemonics and word breakdowns are memory associations, not etymological claims. Roman Urdu spelling may vary.
+Definitions cover selected study senses rather than every dictionary sense. Synonyms and antonyms depend on context; contextual contrasts are labeled. Mnemonics and memory cues are memory associations, not etymological claims. Roman Urdu spelling may vary.
 
 **Review status:** study material is a draft for user review. Marking a word as read records that you reviewed it; marking it Correct in the random test records your self-check for the review bucket only. Neither action certifies mastery.
 
