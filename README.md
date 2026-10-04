@@ -8,17 +8,17 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 
 - **878 words and phrases**, grouped into eight sections of 100 and a final section of 78.
 - Word cards include meaning, two memory cues, example sentence, English and Roman Urdu mnemonics, synonyms, and antonyms.
-- Source tags: **160+**, **High frequency**, **Confusing words**, and **New words 2023**. Detail cards include the original set numbers where applicable.
+- Source tags: **160+**, **High frequency**, **Confusing words**, and **New words 2023**. 160+ cards include 50-word study-set tags; other source tags keep set details where applicable.
 - Category filter chips: select one or more categories, or choose **All words** to reset.
-- Within **160+**, choose **Basic (150)** or **Advanced (179)**. These are suggested study levels, not classifications from the PDF.
+- Within **160+**, choose 50-word sets for focused review; the final set contains the remaining words.
 - Filter by **Unread** or **Read**, directly on the sections page or inside a word list.
 - Switch between **Sections** and a flat **Word list** for quicker review.
 - Search across sections, including supported word forms from the source PDF.
 - **✓ Mark as read** on each detail card. Read words also show a checkmark in lists and search results.
-- Bookmark a list row to save a resume point for the active category or level.
+- Bookmark a list row to save a resume point for the active category or set.
 - **Random word test** gives you one word at a time with **Correct** and **Needs review** actions.
 - **Needs review** words are saved in a local review bucket and are prioritized the next time you use Random word test.
-- Next/Previous navigation stays within your active category, level, and reading-progress filters.
+- Next/Previous navigation stays within your active category, set, and reading-progress filters.
 
 Filters, read checkmarks, and Needs review words are saved in your browser’s local storage. They do not sync between devices or browsers. Clearing site data removes them. The downloaded file and the hosted website have separate storage.
 
