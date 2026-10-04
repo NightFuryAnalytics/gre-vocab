@@ -7,26 +7,17 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 ## What’s included
 
 - **878 words and phrases**, grouped into eight sections of 100 and a final section of 78.
-- Tap any word to see its meaning, word breakdown cue, example sentence, English and Roman Urdu mnemonics, synonyms, and antonyms.
+- Word cards include meaning, word breakdown cue, example sentence, English and Roman Urdu mnemonics, synonyms, and antonyms.
 - Source tags: **160+**, **High frequency**, **Confusing words**, and **New words 2023**. Detail cards include the original set numbers where applicable.
 - Category filter chips: select one or more categories, or choose **All words** to reset.
 - Within **160+**, choose **Basic (150)** or **Advanced (179)**. These are suggested study levels, not classifications from the PDF.
 - Filter by **Unread** or **Read**, directly on the sections page or inside a word list.
 - Switch between **Sections** and a flat **Word list** for quicker review.
 - Search across sections, including supported word forms from the source PDF.
-- **✓ Mark as read** on each detail card. Tap again to mark it unread. Read words also show a checkmark in lists and search results.
-- **Random word test** gives you one word at a time. Tap the card to reveal the meaning, then mark it **Correct** or **Needs review**.
+- **✓ Mark as read** on each detail card. Read words also show a checkmark in lists and search results.
+- **Random word test** gives you one word at a time with **Correct** and **Needs review** actions.
 - **Needs review** words are saved in a local review bucket and are prioritized the next time you use Random word test.
 - Next/Previous navigation stays within your active category, level, and reading-progress filters.
-
-## Use the app
-
-1. Choose your categories on the sections page, or leave **All words** selected.
-2. Open a section and tap a word.
-3. Review the card and mark it as read when ready.
-4. Continue with **Next word**, or return to the word list.
-
-For a quick quiz, tap **Random word test**, think of the meaning, tap the card to reveal the answer, then mark **Correct** or **Needs review**. The test respects active filters where possible, and words in the Needs review bucket are shown first.
 
 Filters, read checkmarks, and Needs review words are saved in your browser’s local storage. They do not sync between devices or browsers. Clearing site data removes them. The downloaded file and the hosted website have separate storage.
 
