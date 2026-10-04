@@ -16,7 +16,7 @@ A simple, mobile-friendly vocabulary app for reviewing GRE words on the go.
 - Search across sections, including supported word forms from the source PDF.
 - **✓ Mark as read** on each detail card. Read words also show a checkmark in lists and search results.
 - Bookmark a list row to save a resume point for the active category or set.
-- **Random word test** gives you one word at a time with **Correct** and **Needs review** actions.
+- **Random word test** gives you one word at a time with **Needs review**, **Next word**, and **Correct** actions.
 - **Needs review** words are saved in a local review bucket and are prioritized the next time you use Random word test.
 - Next/Previous navigation stays within your active category, set, and reading-progress filters.
 
