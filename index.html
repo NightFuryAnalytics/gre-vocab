@@ -24,6 +24,18 @@ if(level!=='all')selected=new Set(['hard']);
 function persistFilters(){try{localStorage.setItem('gre-category-filters-v1',JSON.stringify([...selected]));localStorage.setItem('gre-study-filters-v1',JSON.stringify({level,status,browse}))}catch{}}
 function normal(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’']/g,'').replace(/[- ]+/g,' ')}
 function matchesCategory(e){const read=readWords.has(e.node.querySelector('strong').textContent.toLowerCase());return (!selected.size||e.tags.some(k=>selected.has(k)))&&(level==='all'||e.level===level)&&(status==='all'||(status==='read'?read:!read))}
+function wordCount(n){return n+' '+(n===1?'word':'words')}
+function activeFilterLabel(){
+ const parts=[];
+ if(selected.size){
+  const cats=[...selected].map(k=>labels[k]).filter(Boolean);
+  if(level!=='all'&&selected.has('hard'))cats[cats.indexOf('160+')]='160+ '+level;
+  parts.push(cats.join(' + '));
+ }
+ if(!selected.size&&level!=='all')parts.push('160+ '+level);
+ if(status!=='all')parts.push(status);
+ return parts.filter(Boolean).join(' · ');
+}
 function updateSearch(){
  const q=normal(search.value.trim());results.replaceChildren();menu.hidden=!!q||browse==='words';results.hidden=!q&&browse!=='words';
  if(!q&&browse!=='words'){count.textContent='';return}
@@ -34,6 +46,7 @@ function updateSearch(){
 }
 function applyFilters(){
  const pool=entries.filter(matchesCategory);const ids=new Set(pool.map(e=>e.id));
+ const filtered=selected.size||level!=='all'||status!=='all',filterLabel=activeFilterLabel();
  document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter==='all'?!selected.size:selected.has(b.dataset.filter))));
  document.querySelectorAll('[data-level].chip').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.level===level)));
  document.querySelectorAll('[data-status]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.status===status)));
@@ -48,13 +61,15 @@ function applyFilters(){
   item.querySelector('.range').textContent=(selected.size||status!=='all')?matching.length+' words':all[0].id+'–'+all.at(-1).id;
   const ends=matching.length?matching:all;
   item.querySelector('small').textContent=ends[0].node.querySelector('strong').textContent+' → '+ends.at(-1).node.querySelector('strong').textContent;
-  page.querySelector('.eyebrow').textContent=matching.length+' of '+all.length+' words'+(level!=='all'?' · 160+ '+level:'')+(status!=='all'?' · '+status:'');
+  page.querySelector('.eyebrow').textContent=filtered?wordCount(matching.length)+(filterLabel?' · '+filterLabel:''):all.length+' words & phrases';
   page.querySelector('.section-empty').hidden=!!matching.length;
  }
- document.querySelector('#library-count').textContent=pool.length+' words & phrases · '+shownSections+' sections';
+ document.querySelector('#library-count').textContent=(filtered?wordCount(pool.length)+(filterLabel?' · '+filterLabel:''):pool.length+' words & phrases')+' · '+shownSections+' sections';
  // Keep next/previous navigation within the selected categories.
  for(const page of document.querySelectorAll('.word-page')){
   const id=Number(page.id.slice(5)),before=pool.filter(e=>e.id<id).at(-1),after=pool.find(e=>e.id>id),nav=page.querySelector('.pager');
+  const meta=page.querySelector('.card-meta .eyebrow'),poolIndex=pool.findIndex(e=>e.id===id);
+  meta.textContent=filtered?(poolIndex>=0?'Word '+(poolIndex+1)+' / '+pool.length+(filterLabel?' · '+filterLabel:''):'Outside filter · Word '+id+' / '+entries.length):'Word '+String(id).padStart(3,'0')+' / '+entries.length;
   nav.replaceChildren();
   for(const [entry,text,cls] of [[before,'← Previous',''],[after,'Next word →','next']]){
    if(!entry)continue;const a=document.createElement('a');a.href='#word-'+entry.id;a.textContent=text;a.className=cls;nav.append(a);
